@@ -6,7 +6,6 @@ void main() => runApp(new MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     return new MaterialApp(
         title: 'Welcome to Flutter!@#!@#',
         theme: new ThemeData(
@@ -14,6 +13,11 @@ class MyApp extends StatelessWidget {
         ),
         home: new RandomWords());
   }
+}
+
+class RandomWords extends StatefulWidget {
+  @override
+  createState() => new RandomWordsState();
 }
 
 class RandomWordsState extends State<RandomWords> {
@@ -92,21 +96,39 @@ class RandomWordsState extends State<RandomWords> {
     );
   }
 
+  void _showDialog() {
+    showDialog(
+        context: context,
+        barrierDismissible: false, // user must tap button!
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: new Text("Damn it"),
+            content: new Text("WHAT FUCK ARE U CLICK!"),
+            actions: <Widget>[
+              new FlatButton(
+                child: new Text("对不起大哥我错了"),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              )
+            ],
+          );
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
         title: new Text('Startup Name Generator'),
         actions: <Widget>[
+          new IconButton(
+              icon: new Icon(Icons.search, color: Colors.white),
+              onPressed: _showDialog),
           new IconButton(icon: new Icon(Icons.list), onPressed: _pushSaved),
         ],
       ),
       body: _buildSuggestions(),
     );
   }
-}
-
-class RandomWords extends StatefulWidget {
-  @override
-  createState() => new RandomWordsState();
 }
