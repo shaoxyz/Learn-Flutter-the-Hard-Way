@@ -15,5 +15,5 @@
 [Flutter Crash Course - Building a Complete App From Scratch](https://www.youtube.com/watch?v=jBBl1tYkUnE&t=3686s)
 
 
-[视频源码](https://github.com/bramvbilsen/Flutter-Quiz-Preview-App)
+[视频教程的源码](https://github.com/bramvbilsen/Flutter-Quiz-Preview-App)
 
