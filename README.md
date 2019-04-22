@@ -1,15 +1,12 @@
-# try_widget
+# try_dev_flow
 
-尝试理解widget到底是怎么回事
-
-
-最开始是想加个搜索按钮，然后按输入生成一个单词对
+尝试一个完整app的开发流程
 
 
-感觉没理解widget无从下手，就现加了一个dialog，去翻了文档
+跟着视频一起敲的，近两个小时，回头还得自己重复一遍练习
 
 
-发现文档看着很吃力，就直接Google了一个dialog的例子，这才大概懂了点..
+https://www.youtube.com/watch?v=jBBl1tYkUnE&t=3686s
 
 
-顺便试试一些平时不怎么用的git命令
+
